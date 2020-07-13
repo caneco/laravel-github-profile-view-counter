@@ -1,56 +1,39 @@
-# :package_description
+# Laravel GitHub Profile Visit Counter
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/:package_name.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/spatie/:package_name/run-tests?label=tests)](https://github.com/spatie/:package_name/actions?query=workflow%3Arun-tests+branch%3Amaster)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/:package_name.svg?style=flat-square)](https://packagist.org/packages/spatie/:package_name)
+<p align="center">
+    <img src="/art/socialcard.png" width="1280" title="Social Card Laravel GitHub Profile View Counter">
+    <p align="center">
+        <a href="https://packagist.org/packages/caneco/laravel-github-profile-view-counter"><img alt="Total Downloads" src="https://img.shields.io/packagist/dt/caneco/laravel-github-profile-view-counter"></a>
+        <a href="https://packagist.org/packages/caneco/laravel-github-profile-view-counter"><img alt="License" src="https://img.shields.io/packagist/l/caneco/laravel-github-profile-view-counter"></a>
+    </p>
+</p>
 
-**Note:** Replace ```:author_name``` ```:author_username``` ```:author_email``` ```:package_name``` ```:package_description``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can also run `configure-skeleton.sh` to do this automatically.
+This package will allows you to track Github profile views and display them in your profile readme, for free.
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-Learn how to create a package like this one, by watching our premium video course:
-
-[![Laravel Package training](https://spatie.be/github/package-training.jpg)](https://laravelpackage.training)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This package was inspired Artem Golubin's post [**How to track and display profile views on GitHub**](https://rushter.com/blog/github-profile-markdown/).
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require spatie/package-skeleton-laravel
+composer require caneco/laravel-github-profile-view-counter
 ```
 
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="migrations"
+php artisan vendor:publish --provider="Caneco\GithubProfileViewCounter\GithubProfileViewCounterServiceProvider" --tag="migrations"
 php artisan migrate
-```
-
-You can publish the config file with:
-```bash
-php artisan vendor:publish --provider="Spatie\Skeleton\SkeletonServiceProvider" --tag="config"
-```
-
-This is the contents of the published config file:
-
-```php
-return [
-];
 ```
 
 ## Usage
 
-``` php
-$skeleton = new Spatie\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
-```
+Just visit `yourdomain.com/github-profile-view-counter.svg`, you should see your badge with `visits++`.
+
+## Cheating
+
+You can always fill your table with a lot of rows to make yourself famous! **But, play nice** 😉.
 
 ## Testing
 
@@ -66,15 +49,15 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Security
-
-If you discover any security related issues, please email freek@spatie.be instead of using the issue tracker.
-
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Caneco](https://github.com/caneco)
 - [All Contributors](../../contributors)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+
+## Thanks
+
+Thanks to Spatie to make damn easy to create a new package. Please do check their [`spatie/package-skeleton-laravel`](https://github.com/spatie/package-skeleton-laravel).

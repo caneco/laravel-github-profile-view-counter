@@ -1,17 +1,13 @@
 {
-    "name": "spatie/:package_name",
-    "description": ":package_description",
-    "keywords": [
-        "spatie",
-        ":package_name"
-    ],
-    "homepage": "https://github.com/spatie/:package_name",
+    "name": "caneco/laravel-github-profile-view-counter",
+    "description": "Track and display profile views on your GitHub profile.",
+    "keywords": ["laravel", "github", "readme", "track", "webcounter"],
+    "homepage": "https://github.com/caneco/laravel-github-profile-view-counter",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": "https://spatie.be",
+            "name": "Caneco",
+            "homepage": "https://caneco.dev",
             "role": "Developer"
         }
     ],
@@ -27,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\Skeleton\\": "src"
+            "Caneco\\GithubProfileViewCounter\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\Skeleton\\Tests\\": "tests"
+            "Caneco\\GithubProfileViewCounter\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,13 +43,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "Spatie\\Skeleton\\SkeletonFacade"
-            }
+                "Caneco\\GithubProfileViewCounter\\GithubProfileViewCounterServiceProvider"
+            ]
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": false
 }

@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\Skeleton\Tests;
+namespace Caneco\GithubProfileViewCounter\Tests;
 
+use Caneco\GithubProfileViewCounter\GithubProfileViewCounterServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Spatie\Skeleton\SkeletonServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -11,13 +11,15 @@ class TestCase extends Orchestra
     {
         parent::setUp();
 
+        $this->app['config']->set('app.key', 'base64:hk7cBvtdbVdOgFAWG6qsZ3YWWguW9n4WrvebaiHvTjU=');
+
         $this->withFactories(__DIR__.'/database/factories');
     }
 
     protected function getPackageProviders($app)
     {
         return [
-            SkeletonServiceProvider::class,
+            GithubProfileViewCounterServiceProvider::class,
         ];
     }
 
@@ -30,9 +32,7 @@ class TestCase extends Orchestra
             'prefix' => '',
         ]);
 
-        /*
-        include_once __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        (new \CreatePackageTable())->up();
-        */
+        include_once __DIR__.'/../database/migrations/create_github_profile_view_counter_table.php.stub';
+        (new \CreateGithubProfileViewCounterTable())->up();
     }
 }
